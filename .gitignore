@@ -1,0 +1,6 @@
+.idea/
+.idea/.name
+.idea/vcs.xml
+__pycache__/
+defs.py
+streamlit_app.py
