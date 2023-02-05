@@ -1,7 +1,7 @@
 # Projeto de Insights
 Este é um projeto fictício usando dados disponíveis na plataforma [Kaggle](https://www.kaggle.com/).
 
-Esses dados foram utilizados para conclusão da disciplina 'Do Zero ao DS em Python' da [Comunidade DS](https://www.linkedin.com/company/comunidade-ds/mycompany/). Aqui uso ferramentas de programação (Python) e minha expertise com análises estátisticas descritivas para solução de um problema de negócio de uma empresa chamada House rocket. 
+Esses dados foram utilizados para conclusão da disciplina 'Do Zero ao DS em Python' da [Comunidade DS](https://www.linkedin.com/company/comunidade-ds/mycompany/). Aqui uso linguagem Python e minha expertise com análises estátisticas descritivas para solução de um problema de negócio de uma empresa chamada House rocket. 
 
 ## 1. Descrição
 
