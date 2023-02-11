@@ -4,9 +4,6 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 import plotly.express as px
-import locale
-
-locale.setlocale(locale.LC_ALL, "pt_BR.UTF-8")
 
 st.set_page_config(layout='wide')
 st.title('House Rocket Project')
