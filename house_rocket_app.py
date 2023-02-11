@@ -4,12 +4,14 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 import plotly.express as px
+import locale
+
+locale.setlocale(locale.LC_ALL, "pt_BR.UTF-8")
 
 st.set_page_config(layout='wide')
 st.title('House Rocket Project')
 st.markdown(' Welcome to House Rocket Data Analysis.')
 
-st.header('Data Overview')
 # =======================
 ### Functions
 @st.cache( allow_output_mutation=True)
@@ -22,33 +24,47 @@ def get_data(path):
 
 # =======================
 ### Extract
-data = get_data('kc_house_data.csv')
-st.dataframe(data)
+data = pd.read_csv('kc_house_data.csv')
+data['date'] = pd.to_datetime(data['date'], format='%Y-%m-%d')
 
 # =======================
 ### Transformation
 # Add new features
 data['price_m2'] = data['price']/(data['sqft_lot']/10.764)
 
-
-# =======================
-### Load
-# Map
-# mapa com imoveis que devem ser comprados
-st.title('House Rocket Map')
-is_check = st.checkbox('Display map')
-
-# filters
 # Add filters
-bedrooms = st.sidebar.multiselect('Number of bedrooms', 
-             data['bedrooms'].sort_values(ascending=True).unique())
+# columns filter
+f_attributes = st.sidebar.multiselect('Select columns', data.columns )
+# rows filter
+f_zipcode = st.sidebar.multiselect('Select zipcode', 
+                    data['zipcode'].sort_values(ascending=True).unique())
+#bedrooms = st.sidebar.multiselect('Number of bedrooms', 
+             #data['bedrooms'].sort_values(ascending=True).unique())
+# Preparing dataset with filters
 
+st.header('Data Overview')
+if (f_zipcode != []) & (f_attributes != []):
+    data = data.loc[data['zipcode'].isin(f_zipcode), f_attributes]
+elif (f_zipcode == []) & (f_attributes != []):
+    data = data.loc[:, f_attributes]
+elif (f_zipcode != []) & (f_attributes == []):
+    data = data.loc[data['zipcode'].isin(f_zipcode), :]
+else:
+    data = data.copy()
+st.write(data)
+
+#map filter
 price_min = int(data['price'].min())
 price_max = int(data['price'].max())
 price_mean = int(data['price'].mean())
 
-price_slider = st.slider('Price range', price_min,price_max,price_mean)
+# =======================
+### Load
 
+# Map 
+st.header('House Rocket Map')
+is_check = st.checkbox('Display map') 
+price_slider = st.slider('Price range', price_min,price_max,price_mean)
 if is_check:
     #select rows
     houses = data[data['price'] < price_slider][['id','lat',
