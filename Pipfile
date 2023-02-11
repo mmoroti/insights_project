@@ -7,6 +7,7 @@ name = "pypi"
 pandas = "*"
 streamlit = "*"
 seaborn = "*"
+plotly = "*"
 
 [dev-packages]
 

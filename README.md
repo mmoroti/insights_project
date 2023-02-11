@@ -39,6 +39,15 @@ Os dados podem ser encontrados nesse link. Abaixo defino cada atributo presente 
 ## 5. Ferramentas
 
 ## 6. Insights e hipóteses de negócio
+#### H1 - Imóveis que possuem vista para água são 20% mais caros? 
+
+#### H2 - Imóveis com data de construção menor que 1955, são 50% mais baratos na média?
+
+#### H3 - O crescimento do preço dos imóveis YoY (year over year) é de 10% ?
+
+#### H4 - O preço aumenta conforme o tamanho do imóvel aumenta? 
+
+#### H5 - O saldo positivo da venda, em média, é maior no inverno? 
 
 ## 7. Conclusão
 
