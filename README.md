@@ -7,7 +7,7 @@ Esses dados foram utilizados para conclusão da disciplina 'Do Zero ao DS em Pyt
 
 A House Rocket é uma empresa que atua no mercado imobiliário, efetuando a compra de imóveis que estejam com valor de venda abaixo de valor de mercado e que estejam em bom estado de conservação para a posterior revenda.
 
-O projeto encontra-se em produção e pode ser acessado nesse [link](). A entrega do projeto foi realizada usando o framework do Streamlit. Essa ferramenta possibilita a construção de um dashboard interativo, facilitando o acesso as informações e a tomada de decisão.
+O projeto encontra-se em produção e pode ser acessado nesse [link](https://mmoroti-insights-project-house-rocket-app-xt9ns5.streamlit.app/). A entrega do projeto foi realizada usando o framework do Streamlit. Essa ferramenta possibilita a construção de um dashboard interativo, facilitando o acesso as informações e a tomada de decisão.
 
 ## 2. Atributos (features)
 Os dados podem ser encontrados nesse link. Abaixo defino cada atributo presente no dataset:
@@ -40,14 +40,19 @@ Os dados podem ser encontrados nesse link. Abaixo defino cada atributo presente 
 
 ## 6. Insights e hipóteses de negócio
 #### H1 - Imóveis que possuem vista para água são 20% mais caros? 
+Verdadeiro. Imóveis com vista para a água são mais caros.
 
 #### H2 - Imóveis com data de construção menor que 1955, são 50% mais baratos na média?
+Falso. Imóveis com data de construção menor que 1955 não são mais baratos.
 
 #### H3 - O crescimento do preço dos imóveis YoY (year over year) é de 10% ?
+Falso. O valor dos imóveis oscila ao longo do tempo, com quedas e aumentos.
 
 #### H4 - O preço aumenta conforme o tamanho do imóvel aumenta? 
+Falso. 
 
 #### H5 - O saldo positivo da venda, em média, é maior no inverno? 
+Falso.
 
 ## 7. Conclusão
 
