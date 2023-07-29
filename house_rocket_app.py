@@ -21,7 +21,7 @@ def get_data(path):
 
 # =======================
 #%% Extract
-data = pd.read_csv('\..\..\kc_house_data.csv')
+data = pd.read_csv('kc_house_data.csv')
 data['date'] = pd.to_datetime(data['date'], format='%Y%m%dT%H%M%S')
 
 # =======================
